@@ -19,7 +19,7 @@ class GameEngine {
   _subEngine returns true
   The function should have two Player model as parameters 
 */
-  void startGame(players) {
+  void startGame(var players) {
     bool player1Died = false;
     bool player2Died = false;
 
@@ -27,7 +27,8 @@ class GameEngine {
       //Display Fight information details as seen in the screenshot
       print(
           '-----------------------------------------------------------------');
-      print('Round ${this.round}: ${players[0]} attacks ${players[1]}');
+      print(
+          'Round ${this.round}: ${players[0].player_name} attacks ${players[1].player_name}');
       print(
           '-----------------------------------------------------------------');
 
@@ -39,7 +40,8 @@ class GameEngine {
       //Display Fight information details as seen in the screenshot
       print(
           '-----------------------------------------------------------------');
-      print('Round ${this.round}: ${players[1]} attacks ${players[0]}');
+      print(
+          'Round ${this.round}: ${players[1].player_name} attacks ${players[0].player_name}');
       print(
           '-----------------------------------------------------------------');
 
